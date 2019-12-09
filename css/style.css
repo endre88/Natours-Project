@@ -7,18 +7,24 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
+
+html {
+  font-size: 62,5%; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #fff;
-  padding: 30px; }
+  color: #777;
+  padding: 1rem;
+  box-sizing: border-box; }
 
 .header {
   height: 95vh;
@@ -27,22 +33,19 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 95vh);
-  /*  clip-path: polygon(50% 0, 100% 95vh,0 95vh); triangle
- */ }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
 
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px; }
-
-.logo {
+.header__logo {
   height: 35px; }
 
-.logo-box:hover {
+.header__logo-box:hover {
   backface-visibility: hidden; }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;

@@ -9,14 +9,20 @@ Dark green: #28b485
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
-
-
+$color-grey-dark:#777;
 $color-white:#fff;
+$color-black:#000;
 
-*{
+*,
+*::after,
+*::before{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62,5%;
 }
 
 body {
@@ -24,38 +30,38 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color:$color-white;
-    padding: 30px;
-    
-
+    color:$color-grey-dark;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark, 0.8)),url("../img/hero.jpg"); /*átlós*/
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light,0.8),
+        rgba($color-primary-dark, 0.8)),
+        url("../img/hero.jpg"); /*átlós*/
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 95vh);
-/*  clip-path: polygon(50% 0, 100% 95vh,0 95vh); triangle
- */}
-
-.logo-box{
-    position: absolute;
-    top:40px;
-    left:40px;
-
+    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+    &__logo-box{
+        position: absolute;
+        top:40px;
+        left:40px;
+    }
 }
 
-.logo{
+.header__logo{
     height: 35px;
 
 }
-.logo-box:hover{
+.header__logo-box:hover{
     backface-visibility: hidden;
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     top:40%;
     left:50%;
@@ -154,18 +160,18 @@ body {
 
 .btn:hover{
     transform:translateY(-3px);
-    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    box-shadow:0 10px 20px rgba($color-black,.2);
 }
 
 .btn:active{
     transform: translateY(-1px);
-    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    box-shadow:0 5px 10px rgba($color-black,.2);
 
 }
 
 .btn-white{
     background-color: $color-white;
-    color:#777;
+    color:$color-grey-dark;
 
 }
 
