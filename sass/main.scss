@@ -53,12 +53,10 @@ body {
     }
     &__logo{
         height: 35px;
-
     }
     &__logo-box:hover{
         backface-visibility: hidden;
     }
-
     &__text-box{
         position: absolute;
         top:40%;
@@ -66,43 +64,40 @@ body {
         transform: translate(-50%,-50%);
         text-align: center;
     }
-    
 }
 
 .heading-primary{
     text-transform: uppercase;
     color: $color-white;
     backface-visibility: hidden;/* hide shake */
-    margin-bottom: 60px;;
+    margin-bottom: 60px;
+    &-main{
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+        animation-name: moveInLeft;
+        animation-duration: 1s; 
+        /*animation-delay: 3s;
+        animation-iteration-count: 3;*/
+        animation-timing-function: ease-out;
+    }
+    &-sub{
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 17.4px;
+        animation: moveInRight 1s ease-out;
+    }
 }
 
-.heading-primary-main{
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-    animation-name: moveInLeft; /*keyframes meghívása*/
-    animation-duration: 1s; /*meddig jöjjön*/
-    /*animation-delay: 3s;
-    animation-iteration-count: 3;*/
-    animation-timing-function: ease-out;
-    
 
-}
-
-.heading-primary-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation: moveInRight 1s ease-out;
-}
 
 
 @keyframes moveInLeft{
     0%{
         opacity: 0;            
-        transform: translateX(-100px); /* //-100px-ről jöjjön az elem */
+        transform: translateX(-100px); 
         transform: translateY(40px);
     }
     80%{
@@ -118,18 +113,14 @@ body {
 @keyframes moveInRight{
     0%{
         opacity: 0;            
-        transform: translateX(100px); /* //-100px-ről jöjjön az elem */
+        transform: translateX(100px);
     }
-
     80%{
         transform: translateX(-10px);
     }
-
     100%{
         opacity: 1;
         transform: translate(0);
-        
-
     }
 }
  @keyframes moveInBottom{
@@ -141,7 +132,6 @@ body {
     100%{
         transform:translate(0);
         opacity:1;
-
     }
 } 
 
@@ -173,7 +163,6 @@ body {
 .btn-white{
     background-color: $color-white;
     color:$color-grey-dark;
-
 }
 
 .btn::after {
