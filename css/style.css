@@ -71,6 +71,9 @@ Dark green: #28b485
     transform: translate(-50%, -50%);
     text-align: center; }
 
+.row {
+  max-width: 114rem; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
