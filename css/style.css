@@ -79,7 +79,6 @@ Dark green: #28b485
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 10px auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -88,8 +87,7 @@ Dark green: #28b485
     clear: both;
     content: ""; }
   .row [class^=col-] {
-    float: left;
-    background: orangered; }
+    float: left; }
     .row [class^=col-]:not(:last-child) {
       margin-right: 2rem; }
   .row .col-1-of-2 {
@@ -188,4 +186,11 @@ body {
   transition: all .2s;
   letter-spacing: .2rem; }
   .heading-secondary:hover {
-    transform: skewY(5deg); }
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
