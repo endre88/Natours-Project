@@ -3,7 +3,7 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color:$color-grey-dark;
-    padding: 1.6rem;
+    padding: $default-font-size;
 }
 
 .heading-primary{
@@ -37,7 +37,8 @@ body {
     font-weight:700;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;//back-color, clip text, transparent text
+    -webkit-background-clip: text;
+    background-clip: text;//back-color, clip text, transparent text
     color:transparent;
     transition: all .2s;
     letter-spacing:.2rem;
@@ -46,5 +47,18 @@ body {
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black,.2);
+    }
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+    &:not(:last-child){
+        margin-bottom: 3rem;    
     }
 }
